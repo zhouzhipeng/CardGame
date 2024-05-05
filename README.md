@@ -1,7 +1,7 @@
 ## local dev
 ```bash
 # first time install trunk : cargo install trunk
-trunk serve
+./local_dev.sh
 ```
 
 ## prod release
@@ -11,3 +11,11 @@ trunk serve
 ```
 > then use files in `web` folder
 > update `web/index.html` for production not `index.html` under root folder.
+
+
+## project structure
+
+* `assets`   game resources
+* `dist`  a temp directory for local dev
+* `src`  rust code
+* `web`  a temp directory for production build.
