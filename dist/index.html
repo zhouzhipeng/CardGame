@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>Notan App</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="minimal-ui, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            background-color: #252526;
+        }
+
+        * {
+            outline: none;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+
+<link rel="modulepreload" href="/CardGame-8a9bdda555eff881.js" crossorigin=anonymous integrity="sha384-2XzQlxeCL+KNp0t7zeuvffvVkBWy9qkMfujyt2HgAugM9ULEiwrS//oUHWLCeqED">
+<link rel="preload" href="/CardGame-8a9bdda555eff881_bg.wasm" crossorigin=anonymous integrity="sha384-/Anl6RHo/3n+PrMyPeYXNUyj4dSQ4LAE4A+GYObB5VigZgQvUEs/iRq4Izgle4s3" as="fetch" type="application/wasm"></head>
+<body>
+
+
+<script type="module">
+import init, * as bindings from '/CardGame-8a9bdda555eff881.js';
+const wasm = await init('/CardGame-8a9bdda555eff881_bg.wasm');
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script></body>
+</html>
